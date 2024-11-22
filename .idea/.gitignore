@@ -1,0 +1,22 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Gradle files
+.gradle/
+build/
+
+# Gradle Wrapper binary and jar file
+gradle-wrapper.jar
+gradlew
+gradlew.bat
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper script (gradlew and gradlew.bat)
+!gradlew
+!gradlew.bat
+
+# Cache of project
+.caches/
