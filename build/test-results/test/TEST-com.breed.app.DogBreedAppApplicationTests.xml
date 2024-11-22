@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.breed.app.DogBreedAppApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-22T08:14:48" hostname="DESKTOP-MJBOU37" time="0.6">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.breed.app.DogBreedAppApplicationTests" time="0.6"/>
+  <system-out><![CDATA[11:14:40.766 [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.breed.app.DogBreedAppApplicationTests]: DogBreedAppApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:14:41.334 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.breed.app.DogBreedAppApplication for test class com.breed.app.DogBreedAppApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.6)
+
+11:14:42.037 [Test worker] INFO  c.b.app.DogBreedAppApplicationTests - Starting DogBreedAppApplicationTests using Java 21.0.2 with PID 17572 (started by Admin in C:\Users\Admin\IdeaProjects\KotlinSpringBoot)
+11:14:42.038 [Test worker] INFO  c.b.app.DogBreedAppApplicationTests - No active profile set, falling back to 1 default profile: "default"
+11:14:42.904 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+11:14:43.159 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 247 ms. Found 2 R2DBC repository interfaces.
+11:14:45.312 [Test worker] DEBUG o.s.w.r.r.m.a.RequestMappingHandlerMapping - 2 mappings in 'requestMappingHandlerMapping'
+11:14:45.342 [Test worker] DEBUG o.s.w.r.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+11:14:45.457 [Test worker] DEBUG o.s.w.r.r.m.a.ControllerMethodResolver - ControllerAdvice beans: none
+11:14:45.577 [Test worker] DEBUG o.s.w.s.a.HttpWebHandlerAdapter - enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+11:14:46.425 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Request:  CALL H2VERSION()
+11:14:46.431 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Response: org.h2.result.LocalResult@3031f88 columns: 1 rows: 1 pos: -1
+11:14:46.465 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Request:  SELECT CURRENT_TIMESTAMP
+11:14:46.469 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Response: org.h2.result.LocalResult@588c5305 columns: 1 rows: 1 pos: -1
+11:14:46.528 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Request:  CALL H2VERSION()
+11:14:46.528 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Response: org.h2.result.LocalResult@117c3e27 columns: 1 rows: 1 pos: -1
+11:14:46.530 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Request:  CALL H2VERSION()
+11:14:46.530 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Response: org.h2.result.LocalResult@5c977f53 columns: 1 rows: 1 pos: -1
+11:14:46.532 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Request:  CALL H2VERSION()
+11:14:46.532 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Response: org.h2.result.LocalResult@63164ffe columns: 1 rows: 1 pos: -1
+11:14:46.534 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Request:  CALL H2VERSION()
+11:14:46.534 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Response: org.h2.result.LocalResult@2a361495 columns: 1 rows: 1 pos: -1
+11:14:46.535 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Request:  CALL H2VERSION()
+11:14:46.536 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Response: org.h2.result.LocalResult@5acb8af2 columns: 1 rows: 1 pos: -1
+11:14:46.537 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Request:  CALL H2VERSION()
+11:14:46.538 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Response: org.h2.result.LocalResult@3dc11b1f columns: 1 rows: 1 pos: -1
+11:14:46.539 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Request:  CALL H2VERSION()
+11:14:46.539 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Response: org.h2.result.LocalResult@6cf9dae6 columns: 1 rows: 1 pos: -1
+11:14:46.541 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Request:  CALL H2VERSION()
+11:14:46.541 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Response: org.h2.result.LocalResult@7671e950 columns: 1 rows: 1 pos: -1
+11:14:46.542 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Request:  CALL H2VERSION()
+11:14:46.543 [single-1] DEBUG io.r2dbc.h2.client.SessionClient - Response: org.h2.result.LocalResult@706b7176 columns: 1 rows: 1 pos: -1
+11:14:46.545 [Thread-11] DEBUG io.r2dbc.h2.client.SessionClient - Request:  CREATE TABLE dog_breed ( id VARCHAR(255) PRIMARY KEY, name VARCHAR(255) NOT NULL, sub_breeds TEXT )
+11:14:46.550 [Thread-11] DEBUG io.r2dbc.h2.client.SessionClient - Request:  CREATE TABLE sub_breed ( id VARCHAR(255) PRIMARY KEY, dog_breed_id VARCHAR(255) NOT NULL, name VARCHAR(255) NOT NULL, FOREIGN KEY (dog_breed_id) REFERENCES dog_breed(id) )
+11:14:46.566 [Thread-11] DEBUG io.r2dbc.h2.client.SessionClient - Request:  SELECT CURRENT_TIMESTAMP
+11:14:46.566 [Thread-11] DEBUG io.r2dbc.h2.client.SessionClient - Response: org.h2.result.LocalResult@6620aebf columns: 1 rows: 1 pos: -1
+11:14:46.746 [Test worker] INFO  c.b.app.DogBreedAppApplicationTests - Started DogBreedAppApplicationTests in 5.038 seconds (process running for 7.818)
+11:14:46.936 [Test worker @coroutine#1] DEBUG io.r2dbc.h2.client.SessionClient - Request:  SELECT CURRENT_TIMESTAMP
+11:14:46.937 [Test worker @coroutine#1] DEBUG io.r2dbc.h2.client.SessionClient - Response: org.h2.result.LocalResult@42734b71 columns: 1 rows: 1 pos: -1
+11:14:46.986 [Test worker @coroutine#1] DEBUG io.r2dbc.h2.client.SessionClient - Request:  SELECT COUNT(*) FROM dog_breed
+11:14:46.987 [Test worker @coroutine#1] DEBUG io.r2dbc.h2.client.SessionClient - Response: org.h2.result.LocalResult@6556471b columns: 1 rows: 1 pos: -1
+11:14:47.006 [Test worker @coroutine#1] DEBUG io.r2dbc.h2.client.SessionClient - Request:  SELECT CURRENT_TIMESTAMP
+11:14:47.007 [Test worker @coroutine#1] DEBUG io.r2dbc.h2.client.SessionClient - Response: org.h2.result.LocalResult@75ac326f columns: 1 rows: 1 pos: -1
+11:14:47.012 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - No breeds found in the database, initializing data...
+11:14:47.106 [Test worker @coroutine#1] DEBUG o.s.w.r.f.client.ExchangeFunctions - [5a4e492c] HTTP GET https://dog.ceo/api/breeds/list/all
+11:14:48.608 [reactor-http-nio-2] DEBUG o.s.w.r.f.client.ExchangeFunctions - [5a4e492c] [54ce80c7-1] Response 200 OK
+11:14:48.672 [reactor-http-nio-2] DEBUG org.springframework.web.HttpLogging - [5a4e492c] [54ce80c7-1] Decoded [{message={affenpinscher=[], african=[], airedale=[], akita=[], appenzeller=[], australian=[kelpie, s (truncated)...]
+11:14:48.682 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: affenpinscher
+11:14:48.682 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: african
+11:14:48.682 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: airedale
+11:14:48.683 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: akita
+11:14:48.683 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: appenzeller
+11:14:48.683 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: australian
+11:14:48.683 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: bakharwal
+11:14:48.683 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: basenji
+11:14:48.683 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: beagle
+11:14:48.683 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: bluetick
+11:14:48.683 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: borzoi
+11:14:48.683 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: bouvier
+11:14:48.683 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: boxer
+11:14:48.683 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: brabancon
+11:14:48.683 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: briard
+11:14:48.683 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: buhund
+11:14:48.683 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: bulldog
+11:14:48.683 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: bullterrier
+11:14:48.684 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: cattledog
+11:14:48.684 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: cavapoo
+11:14:48.684 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: chihuahua
+11:14:48.684 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: chippiparai
+11:14:48.684 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: chow
+11:14:48.684 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: clumber
+11:14:48.684 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: cockapoo
+11:14:48.684 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: collie
+11:14:48.684 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: coonhound
+11:14:48.684 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: corgi
+11:14:48.684 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: cotondetulear
+11:14:48.684 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: dachshund
+11:14:48.684 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: dalmatian
+11:14:48.685 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: dane
+11:14:48.685 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: danish
+11:14:48.685 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: deerhound
+11:14:48.685 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: dhole
+11:14:48.685 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: dingo
+11:14:48.685 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: doberman
+11:14:48.685 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: elkhound
+11:14:48.685 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: entlebucher
+11:14:48.685 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: eskimo
+11:14:48.685 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: finnish
+11:14:48.685 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: frise
+11:14:48.685 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: gaddi
+11:14:48.685 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: germanshepherd
+11:14:48.685 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: greyhound
+11:14:48.685 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: groenendael
+11:14:48.685 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: havanese
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: hound
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: husky
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: keeshond
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: kelpie
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: kombai
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: komondor
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: kuvasz
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: labradoodle
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: labrador
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: leonberg
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: lhasa
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: malamute
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: malinois
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: maltese
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: mastiff
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: mexicanhairless
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: mix
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: mountain
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: mudhol
+11:14:48.686 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: newfoundland
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: otterhound
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: ovcharka
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: papillon
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: pariah
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: pekinese
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: pembroke
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: pinscher
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: pitbull
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: pointer
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: pomeranian
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: poodle
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: pug
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: puggle
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: pyrenees
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: rajapalayam
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: redbone
+11:14:48.687 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: retriever
+11:14:48.688 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: ridgeback
+11:14:48.688 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: rottweiler
+11:14:48.688 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: saluki
+11:14:48.688 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: samoyed
+11:14:48.688 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: schipperke
+11:14:48.688 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: schnauzer
+11:14:48.688 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: segugio
+11:14:48.688 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: setter
+11:14:48.688 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: sharpei
+11:14:48.688 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: sheepdog
+11:14:48.688 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: shiba
+11:14:48.688 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: shihtzu
+11:14:48.688 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: spaniel
+11:14:48.688 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: spitz
+11:14:48.689 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: springer
+11:14:48.689 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: stbernard
+11:14:48.689 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: terrier
+11:14:48.689 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: tervuren
+11:14:48.689 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: vizsla
+11:14:48.689 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: waterdog
+11:14:48.689 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: weimaraner
+11:14:48.689 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: whippet
+11:14:48.689 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Added breed: wolfhound
+11:14:48.689 [Test worker @coroutine#1] INFO  c.b.a.config.DataLoaderConfiguration - Breeds initialized in the database.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
