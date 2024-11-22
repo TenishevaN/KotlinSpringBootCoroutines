@@ -17,19 +17,4 @@ class DogBreedAppApplicationTests {
     @Test
     fun contextLoads() {
     }
-
-//    @Test
-//    fun testDatabaseConnection() {
-//        databaseClient!!.sql("SELECT * FROM dog_breed")
-//            .fetch()
-//            .first()
-//            .subscribe(
-//                { result: Map<String?, Any?> ->
-//                    println(
-//                        "Query succeeded: $result"
-//                    )
-//                },
-//                { error: Throwable -> System.err.println("Query failed: $error") })
-//    }
-
 }
