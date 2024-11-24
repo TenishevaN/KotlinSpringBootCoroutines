@@ -1,17 +1,15 @@
 package com.breed.app.controller
 
-import com.breed.app.model.mapper.DogBreedDTO
+import com.breed.app.model.DogBreed
 import com.breed.app.service.DogBreedService
-import kotlinx.coroutines.flow.Flow
-import org.springframework.web.bind.annotation.*
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/dog-breeds")
+@RequestMapping("/api/dog-breeds")
 class DogBreedController(private val dogBreedService: DogBreedService) {
 
-
-    @GetMapping("/{name}")
-    suspend fun getDogBreedsByName(@PathVariable name: String): Flow<DogBreedDTO> {
-        return dogBreedService.getDogBreedsByName(name)
-    }
+    @GetMapping
+    suspend fun getAllBreeds(): List<DogBreed> = dogBreedService.getAllBreeds()
 }
