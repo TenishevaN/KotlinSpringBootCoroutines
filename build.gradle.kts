@@ -1,10 +1,26 @@
-plugins {
-    kotlin("jvm") version "1.9.25"
-    kotlin("plugin.spring") version "1.9.25"
-    id("org.springframework.boot") version "3.4.0"
-    id("io.spring.dependency-management") version "1.1.6"
-}
+val kotlinVersion = "1.9.25"
+val postgreVersion = "1.0.3.RELEASE"
+val springdocVersion = "1.8.0"
+val openapiStarterVersion = "2.7.0"
+val mockitokotkinVersion = "4.0.0"
+val kotlinxCoroutinesReactorVersion = "1.7.3"
+val jacksonModuleKotlinVersion = "2.18.1"
+val reactorKotlinExtensionsVersion = "1.2.2"
+val springmockkVersion = "4.0.2"
+val mockkVersion = "1.13.13"
+val kotlinxCoroutinesTestVersion = "1.9.0"
+val dependencyManagementVersion = "1.1.6"
 
+plugins {
+    val kotlinVersion = "1.9.25"
+    val pluginSpringVersion = "1.9.25"
+    val springframeworkBootVersion = "3.4.0"
+    val dependencyManagementVersion = "1.1.6"
+    kotlin("jvm") version kotlinVersion
+    kotlin("plugin.spring") version pluginSpringVersion
+    id("org.springframework.boot") version springframeworkBootVersion
+    id("io.spring.dependency-management") version dependencyManagementVersion
+}
 
 group = "com.breed"
 version = "0.0.1-SNAPSHOT"
@@ -18,17 +34,6 @@ java {
 repositories {
     mavenCentral()
 }
-
-val postgreVersion = "1.0.3.RELEASE"
-val springdocVersion = "1.8.0"
-val openapiStarterVersion = "2.4.0"
-val mockitokotkinVersion = "4.0.0"
-val kotlinxCoroutinesReactorVersion = "1.7.3"
-val jacksonModuleKotlinVersion = "2.18.1"
-val reactorKotlinExtensionsVersion = "1.2.2"
-val springmockkVersion = "4.0.2"
-val mockkVersion = "1.13.13"
-val kotlinxCoroutinesTestVersion = "1.9.0"
 
 dependencies {
     // Spring Boot Starters
@@ -52,11 +57,8 @@ dependencies {
     implementation ("io.projectreactor.kotlin:reactor-kotlin-extensions:$reactorKotlinExtensionsVersion")
 
     //Swagger
-    runtimeOnly("org.springdoc:springdoc-openapi-kotlin:${springdocVersion}")
     implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:${openapiStarterVersion}")
-    implementation("org.springdoc:springdoc-openapi-starter-webflux-api:${openapiStarterVersion}")
     implementation("org.springdoc:springdoc-openapi-starter-common:${openapiStarterVersion}")
-    implementation("org.springdoc:springdoc-openapi-webflux-ui:${springdocVersion}")
 
     // Development Tools
     developmentOnly ("org.springframework.boot:spring-boot-devtools")
