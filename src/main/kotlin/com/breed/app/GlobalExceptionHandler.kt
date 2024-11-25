@@ -27,5 +27,4 @@ class GlobalExceptionHandler {
     fun handleDatabaseOperationException(ex: BreedDataInvalidException): ResponseEntity<String> {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.message)
     }
-
 }
