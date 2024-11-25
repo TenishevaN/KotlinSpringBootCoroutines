@@ -12,18 +12,18 @@ class DatabaseInitializer(private val databaseClient: DatabaseClient) {
 
     private fun initializeDatabase() {
         val createDogBreedTable = """
-            CREATE TABLE IF NOT EXISTS dogBreed (
-                breed_id BIGSERIAL PRIMARY KEY,
-                breed_name VARCHAR(255) NOT NULL
+            CREATE TABLE IF NOT EXISTS dogBreeds (
+                id BIGSERIAL PRIMARY KEY,
+                name VARCHAR(255) NOT NULL
             );
             
             """.trimIndent()
 
         val createSubBreedTable = """
-            CREATE TABLE IF NOT EXISTS subBreed (
-                subbreed_id BIGSERIAL PRIMARY KEY,
+            CREATE TABLE IF NOT EXISTS subBreeds (
+                id BIGSERIAL PRIMARY KEY,
                 breed_id BIGINT,
-                subbreed_name VARCHAR(255),
+                name VARCHAR(255),
                 FOREIGN KEY (breed_id) REFERENCES dogBreed(breed_id)
             );
             
@@ -32,7 +32,7 @@ class DatabaseInitializer(private val databaseClient: DatabaseClient) {
         databaseClient.sql(createDogBreedTable)
             .fetch()
             .rowsUpdated()
-            .doOnSuccess { count: Long? -> println("dogBreed table creation complete.") }
+            .doOnSuccess { count: Long? -> println("dogBreed table creation complete " + count) }
             .thenMany(
                 databaseClient.sql(createSubBreedTable)
                     .fetch()

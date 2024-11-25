@@ -27,7 +27,8 @@ val kotlinxCoroutinesReactorVersion = "1.7.3"
 val jacksonModuleKotlinVersion = "2.18.1"
 val reactorKotlinExtensionsVersion = "1.2.2"
 val springmockkVersion = "4.0.2"
-val mockkVersion = "1.12.0"
+val mockkVersion = "1.13.13"
+val kotlinxCoroutinesTestVersion = "1.9.0"
 
 dependencies {
     // Spring Boot Starters
@@ -74,6 +75,7 @@ dependencies {
     testImplementation("io.mockk:mockk:$mockkVersion")
     testImplementation("org.mockito:mockito-core:$mockitokotkinVersion")
     testImplementation("org.mockito.kotlin:mockito-kotlin:$mockitokotkinVersion")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$kotlinxCoroutinesTestVersion")
 }
 
 kotlin {
