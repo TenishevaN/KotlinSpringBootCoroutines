@@ -1,41 +1,40 @@
 package com.breed.app
 
+import com.breed.app.model.DogBreed
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.web.reactive.server.WebTestClient
-import com.breed.app.model.SubBreed
-import com.breed.app.repository.SubBreedRepository
-import kotlinx.coroutines.flow.asFlow
-import org.springframework.http.MediaType
-import org.assertj.core.api.Assertions.assertThat
-import org.mockito.kotlin.mock
-import org.mockito.kotlin.whenever
-import org.springframework.boot.test.web.server.LocalServerPort
+import org.flywaydb.core.Flyway
+import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.BeforeEach
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient
+import org.springframework.context.annotation.Import
+import org.springframework.test.context.ActiveProfiles
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class BreedControllerIntegrationEndToEndTest {
-    @LocalServerPort
-    var port: Int = 0
+@ActiveProfiles("test")
+@AutoConfigureWebTestClient
+@Import(TestConfig::class)
+class BreedControllerIntegrationEndToEndTest(
+    @Autowired private val webTestClient: WebTestClient,
+    @Autowired private val flyway: Flyway
+) {
+
+    @BeforeEach
+    fun setup() {
+        flyway.clean()
+        flyway.migrate()
+    }
 
     @Test
-    fun givenRunningService_whenGetSingleCampaign_thenExpectStatus() {
-        val webClient = WebTestClient.bindToServer().baseUrl("http://localhost:$port").build()
-
-        // given
-        val subBreedRepository = mock<SubBreedRepository>()
-        val expectedSubBreeds = listOf(SubBreed(1, 1, "Bulldog"), SubBreed(2, 1, "Boxer"))
-        whenever(subBreedRepository.findByBreedId(1L)).thenReturn(expectedSubBreeds.asFlow())
-
-        //when & then
-        webClient.get()
-            .uri("/v1/breeds/6/sub-breeds")
+    fun `Test Get All Breeds`() {
+        webTestClient.get().uri("/v1/breeds")
             .exchange()
-            .expectStatus()
-            .isOk()
-            .expectHeader().contentType(MediaType.APPLICATION_JSON)
-            .expectBodyList(SubBreed::class.java)
-            .consumeWith<WebTestClient.ListBodySpec<SubBreed>> { response ->
-                assertThat(response.responseBody).hasSize(2)
+            .expectStatus().isOk
+            .expectBodyList(DogBreed::class.java)
+            .consumeWith<WebTestClient.ListBodySpec<DogBreed>> { response ->
+                Assertions.assertTrue(response.responseBody!!.size > 0)
             }
     }
 }

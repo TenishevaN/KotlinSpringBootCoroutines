@@ -7,7 +7,6 @@ import com.breed.app.service.DogBreedService
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.springframework.web.reactive.function.client.WebClient
@@ -31,25 +30,5 @@ class DogBreedImageServiceTest {
         val result = service.getBreedImage(breedId)
 
         assertArrayEquals(expectedImage, result)
-    }
-
-    @Test
-    fun `should fetch image from API if not in repository`() = runTest {
-//        val breedId = 1L
-//        val breedName = "labrador"
-//        val imageUrl = "http://example.com/image.jpg"
-//        val expectedImage = byteArrayOf(4, 5, 6)
-//        val breed = DogBreed(id = 1, name = breedName)
-//        val dogCeoResponse = DogCeoResponse(listOf(imageUrl), "success")
-//
-//        coEvery { dogBreedImageRepository.findByBreedId(breedId) } returns null
-//        coEvery { dogBreedService.getBreedById(breedId) } returns breed
-//        coEvery { webClient.get().uri("/breed/$breedName/images").retrieve().awaitBody<DogCeoResponse>() } returns dogCeoResponse
-//        coEvery { webClient.get().uri(imageUrl).retrieve().awaitBody<ByteArray>() } returns expectedImage
-//        coEvery { dogBreedImageRepository.save(any()) } returns DogBreedImage(id = 0, breedId = 1, image = expectedImage)
-
-//        val result = service.getBreedImage(breedId)
-//
-//        assertArrayEquals(expectedImage, result)
     }
 }

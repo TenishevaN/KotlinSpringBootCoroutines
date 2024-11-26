@@ -35,7 +35,7 @@ class DogBreedControllerTest {
         // given
         val subBreedRepository = mock<SubBreedRepository>()
         val subBreedService = SubBreedService(subBreedRepository)
-        val expectedSubBreeds = listOf(SubBreed(3, 6, "kelpie"), SubBreed(1, 2, "kerryblue"))
+        val expectedSubBreeds = listOf(SubBreed(2, 2, "kelpie"), SubBreed(1, 2, "kerryblue"))
         whenever(subBreedRepository.findAll()).thenReturn(expectedSubBreeds.asFlow())
 
         //when
