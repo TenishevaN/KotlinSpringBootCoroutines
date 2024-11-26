@@ -1,13 +1,17 @@
-CREATE TABLE dog_breed (
-    id VARCHAR(255) PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    sub_breeds TEXT
+CREATE TABLE dogBreeds(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
 );
 
--- If using a separate table for sub-breeds
-CREATE TABLE sub_breed (
-    id VARCHAR(255) PRIMARY KEY,
-    dog_breed_id VARCHAR(255) NOT NULL,
+CREATE TABLE subBreeds(
+    id SERIAL PRIMARY KEY,
+    breed_id INTEGER NOT NULL,
     name VARCHAR(255) NOT NULL,
-    FOREIGN KEY (dog_breed_id) REFERENCES dog_breed(id)
+    FOREIGN KEY (breed_id) REFERENCES dogBreeds(id)
+);
+
+CREATE TABLE dogBreedImage(
+    id SERIAL PRIMARY KEY,
+    breed_id INTEGER NOT NULL,
+    image BYTEA
 );

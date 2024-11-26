@@ -24,7 +24,17 @@ class DatabaseInitializer(private val databaseClient: DatabaseClient) {
                 id BIGSERIAL PRIMARY KEY,
                 breed_id BIGINT,
                 name VARCHAR(255),
-                FOREIGN KEY (breed_id) REFERENCES dogBreed(breed_id)
+                FOREIGN KEY (breed_id) REFERENCES dogBreeds(id)
+            );
+            
+            """.trimIndent()
+
+        val createDogBreedImageTable = """
+            CREATE TABLE IF NOT EXISTS dogBreedImage (
+                id SERIAL PRIMARY KEY,
+                breed_id INTEGER NOT NULL,
+                image BYTEA,
+                FOREIGN KEY (breed_id) REFERENCES dogBreeds(id)
             );
             
             """.trimIndent()
@@ -35,6 +45,11 @@ class DatabaseInitializer(private val databaseClient: DatabaseClient) {
             .doOnSuccess { count: Long? -> println("dogBreed table creation complete " + count) }
             .thenMany(
                 databaseClient.sql(createSubBreedTable)
+                    .fetch()
+                    .rowsUpdated()
+            )
+            .thenMany(
+                databaseClient.sql(createDogBreedImageTable)
                     .fetch()
                     .rowsUpdated()
             )
