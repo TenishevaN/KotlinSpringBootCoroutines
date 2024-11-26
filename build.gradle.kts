@@ -10,6 +10,8 @@ val springmockkVersion = "4.0.2"
 val mockkVersion = "1.13.13"
 val kotlinxCoroutinesTestVersion = "1.9.0"
 val dependencyManagementVersion = "1.1.6"
+val flywayCoreVersion = "10.4.1"
+val h2databaseVersion = "2.2.224"
 
 plugins {
     val kotlinVersion = "1.9.25"
@@ -34,6 +36,7 @@ java {
 repositories {
     mavenCentral()
 }
+
 
 dependencies {
     // Spring Boot Starters
@@ -80,8 +83,8 @@ dependencies {
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$kotlinxCoroutinesTestVersion")
 
     //Flyway
-    implementation ("org.flywaydb:flyway-core:10.4.1")
-    testImplementation ("com.h2database:h2:2.2.224")
+    implementation ("org.flywaydb:flyway-core:$flywayCoreVersion")
+    testImplementation ("com.h2database:h2:$h2databaseVersion")
 }
 
 kotlin {
