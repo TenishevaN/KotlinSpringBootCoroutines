@@ -81,10 +81,6 @@ dependencies {
     testImplementation("org.mockito:mockito-core:$mockitokotkinVersion")
     testImplementation("org.mockito.kotlin:mockito-kotlin:$mockitokotkinVersion")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$kotlinxCoroutinesTestVersion")
-
-    //Flyway
-    implementation ("org.flywaydb:flyway-core:$flywayCoreVersion")
-    testImplementation ("com.h2database:h2:$h2databaseVersion")
 }
 
 kotlin {
